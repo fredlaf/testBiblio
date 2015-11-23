@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+        version="3.0">
+
+    <display-name>Système de gestion de bibliothèque</display-name>
+    <context-param>
+        <param-name>exempleParam1</param-name>
+        <param-value>valeurDeExempleParam1</param-value>
+    </context-param>
+    <context-param>
+        <param-name>exempleParam2</param-name>
+        <param-value>valeurDeExempleParam2</param-value>
+    </context-param>
+    <listener>
+        <listener-class>biblioServlet.BiblioSessionListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>biblioServlet.BiblioContextListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>biblioServlet.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>biblioServlet.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SelectionMembre</servlet-name>
+        <servlet-class>biblioServlet.SelectionMembre</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ListePretMembre</servlet-name>
+        <servlet-class>biblioServlet.ListePretMembre</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Emprunt</servlet-name>
+        <servlet-class>biblioServlet.Emprunt</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SelectionMembre</servlet-name>
+        <url-pattern>/SelectionMembre</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListePretMembre</servlet-name>
+        <url-pattern>/ListePretMembre</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Emprunt</servlet-name>
+        <url-pattern>/Emprunt</url-pattern>
+    </servlet-mapping>
+</web-app>
